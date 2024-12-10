@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calculator {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    transition: background-color 0.3s;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.number {
+    background-color: #505050;
+    color: #fff;
+}
+
+button.operator {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+button.clear, button.equal, button.clear-history, button.dark-mode {
+    background-color: #d4d4d2;
+    color: #000;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+button.operator:hover {
+    background-color: #ffb84d;
+}
+
+button.clear:hover, button.equal:hover, button.clear-history:hover, button.dark-mode:hover {
+    background-color: #e0e0e0;
+}
+
+.history {
+    margin-top: 20px;
+}
+
+.history h2 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#historyList li {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#historyList li button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#historyList li button:hover {
+    background-color: #ff1a1a;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark-mode .calculator {
+    background-color: #222;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+body.dark-mode button.operator {
+    background-color: #ff9500;
+}
+
+body.dark-mode button.operator:hover {
+    background-color: #ffb84d;
+}
+
+body.dark-mode #historyList li {
+    background-color: #333;
+}
+
+body.dark-mode #historyList li button {
+    background-color: #ff4d4d;
+}
+
+button.clear-history {
+    margin-bottom: 10px;
+}
